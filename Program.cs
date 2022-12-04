@@ -1,3 +1,5 @@
+using BulkyBookWeb.Data;
+
 namespace BulkyBookWeb
 {
     public class Program
@@ -8,7 +10,7 @@ namespace BulkyBookWeb
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddDbContext<ApplicationDBContext>(options => options.UseSqlServer); 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
