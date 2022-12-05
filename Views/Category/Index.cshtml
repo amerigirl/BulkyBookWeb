@@ -1,9 +1,13 @@
-﻿@model IEnumerable<Category>
+﻿<!--you need to use the small m here to call not capital-->
+@model IEnumerable<Category> 
+
 @{
     ViewData["Title"] = "Index";
 }
 
 <h1>Index Category</h1>
+
+<!--added a table (review the steps) and added connections in C# to loop through category and pull data-->
 
 <table class="table table-bordered table-striped" style="width:100%">
 	<thead>
@@ -20,13 +24,17 @@
 		@foreach (var obj in Model)
 		{
 			<tr>
+
 				<td width="50%">
 					@obj.Name
 				</td>
+
+				<td width="30%">
+					@obj.DisplayOrder
+				</td>
+
 			</tr>
-			<tr width="30%">
-				@obj.DisplayOrder
-			</tr>
+			
 		}
 	</tbody>
 </table>
