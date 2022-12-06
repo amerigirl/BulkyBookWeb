@@ -35,21 +35,19 @@
 	<thead>
 	<tr>
 		<th>
-			Song Title
+			Playlists Galore!<!--just in case a song can go to more than one list-->
 		</th>
 		<th>
-			Found on these playlist(s) <!--just in case a song can go to more than one list-->
+			Songs (click 'more' for full songlist)
 		</th>
 		
-		<th>
-			Display Order
-		</th>
+		
 	</tr>
 	</thead>
 
 	<tbody>
 	@foreach (var obj in Model) //for each loop to cycle through the category model and grab new table data
-	{
+	{//update the table so that it can create a list of items (3 or 4 max) and then a hyperlink (more) that re-routes to a page that has the entire song list associated with a playlist plus a return button
 		<tr>
 			<td width="50%">
 				@obj.SongTitle
