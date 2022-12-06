@@ -7,7 +7,9 @@
 
 
 <div class="text-center">
-	<h1>Index Category</h1>
+	<br/>
+	<h1 style="color:brown">Find your favorite new music!</h1>
+	<br/>
 </div>
 
 <!--added a table (review the steps) and added connections in C# to loop through category and pull data-->
@@ -17,11 +19,12 @@
 	<thead>
 	<tr>
 		<th>
-			Category Name
-		</th>
-		<th>
 			Song Title
 		</th>
+		<th>
+			Playlist(s) <!--just in case a song can go to more than one list-->
+		</th>
+		
 		<th>
 			Display Order
 		</th>
@@ -32,16 +35,16 @@
 	@foreach (var obj in Model) //for each loop to cycle through the category model and grab new table data
 	{
 		<tr>
-			<td width="30%">
+			<td width="50%">
+				@obj.SongTitle
+			</td>
+
+			<td width="40%">
 				@obj.Name
 			</td>
 
-			<td width="20%">
+			<td width="10%">
 				@obj.DisplayOrder
-			</td>
-			
-			<td width="50%">
-				@obj.SongTitle
 			</td>
 		</tr>
 	}
