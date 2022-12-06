@@ -44,7 +44,7 @@ namespace BulkyBookWeb.Migrations
 
                     b.HasKey("ArtistId");
 
-                    b.ToTable("Artists");
+                    b.ToTable("Artists", (string)null);
                 });
 
             modelBuilder.Entity("BulkyBookWeb.Models.Category", b =>
@@ -71,7 +71,7 @@ namespace BulkyBookWeb.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Categories", (string)null);
                 });
 #pragma warning restore 612, 618
         }

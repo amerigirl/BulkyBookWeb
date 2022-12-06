@@ -1,17 +1,25 @@
 ﻿using BulkyBookWeb.Data;
-using Microsoft.AspNetCore.Mvc;
 using BulkyBookWeb.Models;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace BulkyBookWeb.Controllers
 {
-	public class Artist : Controller
+	public class ArtistController : Controller
 	{
 
-	
+		private readonly ApplicationDBContext _db;
+
+		public ArtistController(ApplicationDBContext db)
+		{
+			_db = db;
+		}
+
 		public IActionResult Index()
 		{
-			return View();
+
+			IEnumerable<Artist> objArtistList = _db.Artists; //i added "specific typecast--it says it exposes the numerator--wtf does that mean?!"
+			return View(objArtistList);
 		}
 
 

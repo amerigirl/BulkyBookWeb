@@ -7,8 +7,10 @@ namespace BulkyBookWeb.Models
 	{
 		[Key]
 		public int ArtistId { get; set; }
+
 		[Required]
 		public string ArtistName { get; set; }
+
 		[Required]
 		public string SongName { get; set; }
 		public string Album { get; set; }
