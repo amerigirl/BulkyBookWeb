@@ -9,8 +9,7 @@ namespace BulkyBookWeb.Models
 
 		[Required]
 		public String Name { get; set; }
-		public int DisplayOrder { get; set; }
-
+		
 		public String SongTitle { get; set; }
 
 
