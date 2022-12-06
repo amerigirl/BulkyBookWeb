@@ -6,7 +6,7 @@ namespace BulkyBookWeb.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> _logger; //so, why isn't this dbContext like the other controller? Is it because it's the homeController?
 
         public HomeController(ILogger<HomeController> logger)
         {
