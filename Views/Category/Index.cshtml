@@ -5,9 +5,13 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index Category</h1>
+
+<div class="text-center">
+	<h1>Index Category</h1>
+</div>
 
 <!--added a table (review the steps) and added connections in C# to loop through category and pull data-->
+
 
 <table class="table table-bordered table-striped" style="width:100%">
 	<thead>
@@ -16,25 +20,31 @@
 			Category Name
 		</th>
 		<th>
+			Song Title
+		</th>
+		<th>
 			Display Order
 		</th>
 	</tr>
 	</thead>
+
 	<tbody>
-		@foreach (var obj in Model)
-		{
-			<tr>
+	@foreach (var obj in Model) //for each loop to cycle through the category model and grab new table data
+	{
+		<tr>
+			<td width="30%">
+				@obj.Name
+			</td>
 
-				<td width="50%">
-					@obj.Name
-				</td>
-
-				<td width="30%">
-					@obj.DisplayOrder
-				</td>
-
-			</tr>
+			<td width="20%">
+				@obj.DisplayOrder
+			</td>
 			
-		}
+			<td width="50%">
+				@obj.SongTitle
+			</td>
+		</tr>
+	}
 	</tbody>
+
 </table>

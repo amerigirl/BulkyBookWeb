@@ -7,9 +7,11 @@ namespace BulkyBookWeb.Models
         [Key]
         public int Id { get; set; }
         
-        [Required]
+        [Required] 
         public String Name { get; set; }
         public int DisplayOrder { get; set; }
+
+        public String SongTitle { get; set; }
 
 
         //current date and time will always be assigned to CreatedDateTime

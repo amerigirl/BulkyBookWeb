@@ -13,11 +13,13 @@ namespace BulkyBookWeb.Controllers
             _logger = logger;
         }
 
+        //call to index
         public IActionResult Index()
         {
             return View();
         }
 
+        //call to privacy
         public IActionResult Privacy()
         {
             return View();
