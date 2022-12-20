@@ -16,4 +16,5 @@ namespace BulkyBookWeb.Models
 		//current date and time will always be assigned to CreatedDateTime
 		public DateTime CreatedDateTime { get; set; } = DateTime.Now;
 	}
+
 }
